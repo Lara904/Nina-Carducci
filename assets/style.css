@@ -241,9 +241,15 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 .carousel-inner {
-    height: 70vh;
-    max-height: 800px;
-    min-height: 400px;
+    height: 60vh !important;
+    min-height: 400px !important;
+}
+
+.picture img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 !important;
+    object-fit: cover !important;
 }
 
 .carousel-item img {
