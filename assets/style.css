@@ -240,6 +240,30 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+.carousel-inner {
+    height: 70vh;
+    max-height: 800px;
+    min-height: 400px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture.left img,
+.picture.right img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.gallery-item {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+}
 
 @media all and (max-width: 1180px) {
 	.picture {

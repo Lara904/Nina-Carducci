@@ -99,6 +99,14 @@
 	}
 	</script>
 	
+	<!-- Critical CSS inline pour éviter CLS -->
+	<style>
+		.carousel-inner { height: 60vh; min-height: 400px; max-height: 800px; }
+		.carousel-item img { width: 100%; height: 100%; object-fit: cover; }
+		.picture.left img { max-width: 560px; aspect-ratio: 1; object-fit: cover; }
+		.picture.right img { max-width: 418px; aspect-ratio: 1; object-fit: cover; }
+	</style>
+	
 	<!-- DNS Prefetch pour les domaines externes -->
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -146,30 +154,27 @@
 						<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" 
 							 class="d-block w-100" 
 							 alt="Homme d'affaires traversant la rue" 
-							 width="4540" 
-							 height="2100"
+							 width="1920" 
+							 height="888"
 							 loading="eager"
 							 fetchpriority="high"
-							 decoding="sync"
-							 style="height: 60vh; min-height: 400px; max-height: 800px; object-fit: cover; object-position: center;">
+							 decoding="sync">
 					</div>
 					<div class="carousel-item">
 						<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp" 
 							 class="d-block w-100" 
 							 alt="Public lors d'un concert levant les bras" 
-							 width="6000" 
-							 height="2775"
-							 loading="lazy"
-							 style="height: 60vh; min-height: 400px; max-height: 800px; object-fit: cover; object-position: center;">
+							 width="1920" 
+							 height="888"
+							 loading="lazy">
 					</div>
 					<div class="carousel-item">
 						<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp" 
 							 class="d-block w-100" 
 							 alt="Couple de mariés s'embrassant lors de leur première danse" 
-							 width="5663" 
-							 height="2613"
-							 loading="lazy"
-							 style="height: 60vh; min-height: 400px; max-height: 800px; object-fit: cover; object-position: center;">
+							 width="1920" 
+							 height="888"
+							 loading="lazy">
 					</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev" aria-label="Image précédente">
@@ -185,7 +190,7 @@
 
 		<section id="about">
 			<div class="picture left">
-				<img src="./assets/images/nina.webp" alt="Portrait de Nina Carducci, photographe professionnelle" width="1460" height="1456" loading="lazy" style="width: 100%; height: auto; max-width: 560px; object-fit: cover;">
+				<img src="./assets/images/nina.webp" alt="Portrait de Nina Carducci, photographe professionnelle" width="560" height="560" loading="lazy">
 			</div>
 			<div id="about-me">
 				<h2 class="about-me__title">À propos de moi</h2>
@@ -281,7 +286,7 @@
 					</form>
 				</div>
 				<div class="picture right">
-					<img src="./assets/images/camera.webp" alt="Appareil photo vintage" width="418" height="417" loading="lazy">
+					<img src="./assets/images/camera.webp" alt="Appareil photo vintage" width="418" height="418" loading="lazy">
 				</div>
 			</div>
 		</section>
