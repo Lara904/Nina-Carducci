@@ -1,3 +1,5 @@
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap');
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -6,6 +8,17 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
+
+
+/* CSS critique pour éviter décalages et CLS */
+body { 
+	font-family: 'Inter', Arial, sans-serif; 
+}
+
+.quote, .about-me__introduction { 
+	font-family: 'Spectral', serif; 
+}
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -69,8 +82,32 @@ body {
 
 .picture img {
 	width: 100%;
-
 }
+
+/* Styles pour éviter CLS sur les images */
+.picture img {
+	width: 100% !important;
+	height: auto !important;
+	aspect-ratio: 1 !important;
+	object-fit: cover !important;
+}
+
+.picture.left img {
+	max-width: 560px;
+	aspect-ratio: 1;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
+.picture.right img {
+	max-width: 418px;
+	aspect-ratio: 1;
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+}
+
 #about-me {
 	flex: 2
 }
@@ -80,7 +117,7 @@ body {
 	font-size: 30px;
 }
 .about-me__introduction {
-	font-family: 'Spectral';
+	font-family: 'Spectral', serif;
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
@@ -99,7 +136,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #5E5611;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -123,6 +160,13 @@ body {
 	object-fit: cover;
 	padding: .5em;
 }
+
+.gallery-item {
+	width: 440px;
+	height: 440px;
+	object-fit: cover;
+}
+
 .mg-prev, .mg-next {
 	width: 30px;
 	height: 30px;
@@ -240,35 +284,24 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+/* Styles pour le carousel */
 .carousel-inner {
-    height: 60vh !important;
-    min-height: 400px !important;
+	height: 60vh;
+	min-height: 400px;
+	max-height: 800px;
 }
 
-.picture img {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 !important;
-    object-fit: cover !important;
+.carousel-inner {
+	height: 60vh !important;
+	min-height: 400px !important;
 }
 
 .carousel-item img {
-    height: 100%;
-    object-fit: cover;
-}
-
-.picture.left img,
-.picture.right img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-}
-
-.gallery-item {
-    width: 440px;
-    height: 440px;
-    object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 @media all and (max-width: 1180px) {
@@ -380,4 +413,3 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
-
