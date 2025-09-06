@@ -1,5 +1,6 @@
 /* Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap');
+
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -133,6 +134,16 @@ body {
 }
 .gallery .nav {
 	justify-content: center;
+}
+
+/* Container pour la galerie avec clearfix */
+.gallery {
+	margin-bottom: 2em;
+}
+
+.container.py-3 {
+	min-height: auto;
+	overflow: hidden;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
